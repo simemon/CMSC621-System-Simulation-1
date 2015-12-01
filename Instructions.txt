@@ -1,0 +1,21 @@
+
+#Open terminal and navigate to the source folder (src)
+#Compiling the Gateway -  
+gcc gateway.c -o gateway -lpthread
+#Compiling the Sensor  -  
+gcc sensor.c -o sensor -lpthread
+#Compiling the SmartDevice - 
+gcc smart_device.c -o smart_device -lpthread
+
+#Running the Gateway -
+./gateway ../SampleInput/Gateway_Config.txt ../SampleInput/Sample_Output.txt 
+
+#Running the Smart Devices -
+./smart_device ../SampleInput/Device_Config_1.txt
+./smart_device ../SampleInput/Device_Config_2.txt
+
+#Running the Sensor -
+./sensor ../SampleInput/Sensor_Config_1_1.txt ../SampleInput/Sensor_Input.txt 
+./sensor ../SampleInput/Sensor_Config_1_2.txt ../SampleInput/Sensor_Input.txt
+./sensor ../SampleInput/Sensor_Config_2_1.txt ../SampleInput/Sensor_Input.txt
+./sensor ../SampleInput/Sensor_Config_2_2.txt ../SampleInput/Sensor_Input.txt
